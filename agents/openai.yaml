@@ -1,0 +1,7 @@
+interface:
+  display_name: "Bib Paper Fetcher"
+  short_description: "Parse a BibTeX .bib file, keep only @article entries, route supported papers, and fetch official PDFs through live Edge sessions."
+  default_prompt: "Use $bib-paper-fetcher to parse my .bib file, queue supported @article entries by platform, and fetch the available official PDFs through my live logged-in Edge session."
+
+policy:
+  allow_implicit_invocation: false
