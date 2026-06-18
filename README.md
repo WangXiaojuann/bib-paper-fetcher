@@ -36,19 +36,14 @@ The main outputs are:
 
 SSRN-hosted papers use `WP` as the journal abbreviation in final PDF filenames.
 
-## Basic Use
+## How to Use
 
-Run the BibTeX pipeline with:
+Install or place this folder as a Codex skill. Then ask Codex to download the papers from a `.bib` file and provide the file path.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\run_bib_paper_pipeline.ps1 init-bib-run --bib-file <path-to-bib-file> --out-dir <run-root>
-powershell -ExecutionPolicy Bypass -File .\scripts\run_bib_paper_pipeline.ps1 import-bib --bib-file <path-to-bib-file> --master-catalog <run-root>\master_catalog.csv
-powershell -ExecutionPolicy Bypass -File .\scripts\run_bib_paper_pipeline.ps1 enrich-dois --master-catalog <run-root>\master_catalog.csv
-powershell -ExecutionPolicy Bypass -File .\scripts\run_bib_paper_pipeline.ps1 build-queues --master-catalog <run-root>\master_catalog.csv --out-dir <run-root>\_runs\queues\bib
-```
+Example request:
 
-Then run the platform wrapper scripts for the queue files that exist, ingest their result CSVs, and finish with:
+> Use `bib-paper-fetcher` to download all available papers in `D:\cite.bib`.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\run_bib_paper_pipeline.ps1 finalize-run --master-catalog <run-root>\master_catalog.csv --download-manifest <run-root>\download_manifest.csv
-```
+Codex will read `SKILL.md`, run the bundled scripts as needed, use the live Edge session for logged-in access, and place downloaded PDFs plus summary files in the chosen output folder.
+
+The scripts under `scripts/` are implementation resources for the skill. Users normally do not need to run them manually.
