@@ -34,8 +34,6 @@ The main outputs are:
 - `failed_downloads.csv`: papers not downloaded
 - `pdf_validation.csv`: local PDF existence/signature check
 
-SSRN-hosted papers use `WP` as the journal abbreviation in final PDF filenames.
-
 ## How to Use
 
 Add `bib-paper-fetcher` to your Codex skills, then ask Codex to download papers from a `.bib` file.
