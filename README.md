@@ -38,12 +38,10 @@ SSRN-hosted papers use `WP` as the journal abbreviation in final PDF filenames.
 
 ## How to Use
 
-Install or place this folder as a Codex skill. Then ask Codex to download the papers from a `.bib` file and provide the file path.
+Add `bib-paper-fetcher` to your Codex skills, then ask Codex to download papers from a `.bib` file.
 
 Example request:
 
 > Use `bib-paper-fetcher` to download all available papers in `D:\cite.bib`.
 
-Codex will read `SKILL.md`, run the bundled scripts as needed, use the live Edge session for logged-in access, and place downloaded PDFs plus summary files in the chosen output folder.
-
-The scripts under `scripts/` are implementation resources for the skill. Users normally do not need to run them manually.
+Codex will use the live Edge session for logged-in access and write downloaded PDFs plus summary files locally.
